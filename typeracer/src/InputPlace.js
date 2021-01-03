@@ -17,6 +17,8 @@ class InputPlace extends React.Component {
         if (event.key === 'Enter') {
              if (this.state.input === this.props.typeString) {
                  this.props.winGame();
+             } else {
+                 alert("Nope...")
              }
         }
     }
@@ -25,7 +27,7 @@ class InputPlace extends React.Component {
         return (
             <div>
                 <header id= "TypeString">
-                    {this.props.typeString}
+                    "{this.props.typeString}"
                 </header>
                 <input id = "TypingInput"
                     onChange = {this.setInput}
